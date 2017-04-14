@@ -38,7 +38,7 @@
 		                            <thead>
 		                                <tr>
 		                                    <th style="width:50px;">#</th>
-		                                    <th style="width:250px;">Tiêu đề</th>
+		                                    <th style="width:230px;">Tiêu đề</th>
 		                                    <th style="width:100px;">Hình ảnh</th>
 		                                    <th style="width:250px;">Địa chỉ</th>
 		                                    <th style="width:80px;">Hướng</th>

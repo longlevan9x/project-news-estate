@@ -65,55 +65,55 @@
 	}
 </style>
 <script type="text/javascript" charset="utf-8" async defer>
-	$(document).ready(function() {
-		// Chech Password
-		$("#txtPassword").blur(function () {
-			if ($.trim($('#txtPassword').val()).length < 7) {
-				$("#txtPassword").after('<p id="err">Mật khẩu phải lớn hơn 6 ký tự</p>');
-				$('#txtPassword').next('p#err').addClass('errPass');
-				$('#txtPassword').addClass('inputErr');
-			}
-		});
-		$("#txtPassword").focus(function () {
-			$('#txtPassword').next('p#err').addClass('displayErr');
-			$('#txtPassword').removeClass('inputErr');
-		});
-		// check Repass
-		$("#txtRepass").blur(function () {
-			if ($.trim($('#txtRepass').val()).length < 7) {
-				$("#txtRepass").after('<p id="err">Mật khẩu nhập lại phải lớn hơn 6 ký tự</p>');
-				$('#txtRepass').next('p#err').addClass('errPass');
-				$('#txtRepass').addClass('inputErr');
-			}
-		});
-		$("#txtRepass").focus(function () {
-			$('#txtRepass').next('p#err').addClass('displayErr');
-			$('#txtRepass').removeClass('inputErr');
-		});
-		// check Fullname
-		$("#txtFullname").blur(function () {
-			if ($.trim($('#txtFullname').val()).length < 4) {
-				$("#txtFullname").after('<p id="err">Họ tên lớn hơn 3 ký tự</p>');
-				$('#txtFullname').next('p#err').addClass('errPass');
-				$('#txtFullname').addClass('inputErr');
-			}
-		});
-		$("#txtFullname").focus(function () {
-			$('#txtFullname').next('p#err').addClass('displayErr');
-			$('#txtFullname').removeClass('inputErr');
-		});
+	// $(document).ready(function() {
+	// 	// Chech Password
+	// 	$("#txtPassword").blur(function () {
+	// 		if ($.trim($('#txtPassword').val()).length < 7) {
+	// 			$("#txtPassword").after('<p id="err">Mật khẩu phải lớn hơn 6 ký tự</p>');
+	// 			$('#txtPassword').next('p#err').addClass('errPass');
+	// 			$('#txtPassword').addClass('inputErr');
+	// 		}
+	// 	});
+	// 	$("#txtPassword").focus(function () {
+	// 		$('#txtPassword').next('p#err').addClass('displayErr');
+	// 		$('#txtPassword').removeClass('inputErr');
+	// 	});
+	// 	// check Repass
+	// 	$("#txtRepass").blur(function () {
+	// 		if ($.trim($('#txtRepass').val()).length < 7) {
+	// 			$("#txtRepass").after('<p id="err">Mật khẩu nhập lại phải lớn hơn 6 ký tự</p>');
+	// 			$('#txtRepass').next('p#err').addClass('errPass');
+	// 			$('#txtRepass').addClass('inputErr');
+	// 		}
+	// 	});
+	// 	$("#txtRepass").focus(function () {
+	// 		$('#txtRepass').next('p#err').addClass('displayErr');
+	// 		$('#txtRepass').removeClass('inputErr');
+	// 	});
+	// 	// check Fullname
+	// 	$("#txtFullname").blur(function () {
+	// 		if ($.trim($('#txtFullname').val()).length < 4) {
+	// 			$("#txtFullname").after('<p id="err">Họ tên lớn hơn 3 ký tự</p>');
+	// 			$('#txtFullname').next('p#err').addClass('errPass');
+	// 			$('#txtFullname').addClass('inputErr');
+	// 		}
+	// 	});
+	// 	$("#txtFullname").focus(function () {
+	// 		$('#txtFullname').next('p#err').addClass('displayErr');
+	// 		$('#txtFullname').removeClass('inputErr');
+	// 	});
 
-		//check username
-		$("#txtUsername").blur(function () {
-			if ($.trim($('#txtUsername').val()).length < 4) {
-				$("#txtUsername").after('<p id="err">Tên tài khoản phải lớn hơn 6 ký tự</p>');
-				$('#txtUsername').next('p#err').addClass('errPass');
-				$('#txtUsername').addClass('inputErr');
-			}
-		});
-		$("#txtUsername").focus(function () {
-			$('#txtUsername').next('p#err').addClass('displayErr');
-			$('#txtUsername').removeClass('inputErr');
-		});
-	});
+	// 	//check username
+	// 	$("#txtUsername").blur(function () {
+	// 		if ($.trim($('#txtUsername').val()).length < 4) {
+	// 			$("#txtUsername").after('<p id="err">Tên tài khoản phải lớn hơn 6 ký tự</p>');
+	// 			$('#txtUsername').next('p#err').addClass('errPass');
+	// 			$('#txtUsername').addClass('inputErr');
+	// 		}
+	// 	});
+	// 	$("#txtUsername").focus(function () {
+	// 		$('#txtUsername').next('p#err').addClass('displayErr');
+	// 		$('#txtUsername').removeClass('inputErr');
+	// 	});
+	// });
 </script>

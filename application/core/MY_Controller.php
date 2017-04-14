@@ -52,7 +52,7 @@ class MY_Controller extends CI_Controller
 		];
 
 		$this->load->model('home_model');
-		$data['newsPosted'] = $this->home_model->get_all_info($this->_tableNameEstate, ['poster_id' => $this->_getSessionId()]);
+		$data['newsPosted'] = $this->home_model->get_all_info($this->_tableNameEstate, ['poster_id' => $this->_getSessionId(), 'status' => 2]);
 		$this->load->view('layouts/header_view', $data);
 
 		if ($this->_className == 'home')

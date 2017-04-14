@@ -89,7 +89,7 @@ class Signup extends MY_Controller
 					"username"    => $username,
 					"email"       => $email,
 					"phone"       => $phone,
-					"password"    => $rePass,
+					"password"    => md5($rePass),
 					"full_name"   => $fullname,
 					"avatar"      => $nameImg,
 					"address"     => $address,

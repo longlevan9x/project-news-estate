@@ -65,23 +65,25 @@
                                         <span class="glyphicon glyphicon-edit">Sửa.</span>
                                     </a>
                                     <!-- button delete -->
-                                    <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal<?php echo $val['id']; ?>"><span class="glyphicon glyphicon-remove"></span>  Xóa.</button>
-                                    <div class="modal fade" id="myModal<?php echo $val['id']; ?>" role="dialog">
-                                        <div class="modal-dialog modal-sm">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                    <h4 class="modal-title">Bạn có muốn xóa tài khoản <?php echo $val['username']; ?>?</h4>
-                                                 </div>
-                                                <div class="modal-footer">
-                                                    <a href="<?php echo site_url('infoadmin/deleteInfo/'.$val['id']); ?>" class="btn btn-lager btn-danger" >
-                                                        <span class="glyphicon glyphicon-remove"> Xóa.</span>
-                                                    </a>
+                                    <?php if ($val['role'] != -2): ?>
+                                        <button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal<?php echo $val['id']; ?>"><span class="glyphicon glyphicon-remove"></span>  Xóa.</button>
+                                        <div class="modal fade" id="myModal<?php echo $val['id']; ?>" role="dialog">
+                                            <div class="modal-dialog modal-sm">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                        <h4 class="modal-title">Bạn có muốn xóa tài khoản <?php echo $val['username']; ?>?</h4>
+                                                     </div>
+                                                    <div class="modal-footer">
+                                                        <a href="<?php echo site_url('infoadmin/deleteInfo/'.$val['id']); ?>" class="btn btn-lager btn-danger" >
+                                                            <span class="glyphicon glyphicon-remove"> Xóa.</span>
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- end delete -->
+                                        <!-- end delete -->
+                                    <?php endif ?>
                                 </td>
                             </tr>
                         <?php $i++; ?>

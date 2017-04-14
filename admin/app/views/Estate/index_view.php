@@ -10,6 +10,14 @@
                 </div>
                 <div class="panel-body">
                     <!-- <a href="<?php echo site_url('estate/index/create'); ?>" class="btn btn-lg btn-success pull-right">Thêm hàng</a> -->
+                    <form action="<?php echo site_url('estate/index'); ?>" method="POST" accept-charset="utf-8">
+                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pull-right">
+                            <button type="submit" class="btn btn-success">Tìm kiếm</button>
+                        </div>
+                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 pull-right">
+                            <input type="text" name="txtKeyword" id="txtKeyword" class="form-control" value="" required="required" minlength="3" placeholder="Tìm kiếm tiêu đề, địa chỉ, người đăng, Hướng, Giá..." title="">
+                        </div>
+                    </form>
                     <div class="form-group">
                         <label for="txtTypeEstate" class="control-label pull-left" style="line-height: 2.5;">Loại BDS</label>
                         <div class="form-group col-md-4 col-lg-4">
@@ -29,10 +37,11 @@
                                 <tr>
                                     <th style="width:50px;">#</th>
                                     <th style="width:210px;">Tiêu đề</th>
-                                    <th style="width:260px;">Địa chỉ</th>
+                                    <th style="width:90px;">Người đăng</th>
+                                    <th style="width:190px;">Địa chỉ</th>
                                     <th style="width:100px;">Hướng</th>
-                                    <th style="width:140px;">Trạng thái</th>
-                                    <th style="width:110px;">Giá</th>
+                                    <th style="width:130px;">Trạng thái</th>
+                                    <th style="width:90px;">Giá</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -44,6 +53,7 @@
                                 <tr>
                                     <td class="text-center"><?php echo $i; ?></td>
                                     <td><?php echo $itemEstate['title']; ?></td>
+                                    <td><?php echo $itemEstate['username']; ?></td>
                                     <td>
                                         <?php echo $itemEstate['name_area']; ?>,
                                         <?php echo $itemEstate['name_district']; ?>,

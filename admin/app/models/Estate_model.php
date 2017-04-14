@@ -17,17 +17,22 @@ class Estate_model extends CI_Model
 	}
 
 
-	public function get_all_data_estate($tableName, $where = array())
+	public function get_all_data_estate($tableName,$like = [],$where = array())
 	{
 		$data = array();
 		foreach ($where as $k => $item)
 		{
 			$this->db->where($k, $item);
 		}
+		foreach ($like as $key => $value)
+		{
+			$this->db->or_like($key, $value);
+		}
 		$this->db->join('object_city', "object_city.id = {$tableName}.city_id");
 		$this->db->join('object_district', "object_district.id = {$tableName}.district_id");
 		$this->db->join('object_area', "object_area.id = {$tableName}.area_id");
 		$this->db->join('object_direction', "object_direction.id = {$tableName}.direction_id");
+		$this->db->join('member', "member.id = {$tableName}.poster_id");
 		$data = $this->db->get($tableName)->result_array();
 		return $data;
 	}

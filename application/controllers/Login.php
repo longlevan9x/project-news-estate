@@ -47,7 +47,7 @@ class Login extends MY_Controller
 			{
 				$infoData = [
 					'username' => $username,
-					'password' => $password
+					'password' => md5($password)
 				];
 
 				$info = $this->login_model->get_info_member($this->__tableNameMem, $infoData);
@@ -122,7 +122,7 @@ class Login extends MY_Controller
 			{
 				$infoData = [
 					'username' => $username,
-					'password' => $password
+					'password' => md5($password)
 				];
 
 				$info = $this->login_model->get_info_member($this->__tableNameMem, $infoData);

@@ -45,7 +45,26 @@ class Estate extends MY_Controller
 		// load menu
 		$this->_loadMenu();
 		// load content
-		$data['estate'] = $this->estate_model->get_all_data_estate($this->_tableNameEstate);
+		$keyword = "";
+		if ($this->input->post())
+		{
+			$keyword = $this->input->post('txtKeyword', TRUE);
+			$keyword = $this->security->xss_clean($keyword);
+			if (strlen($keyword) < 4)
+			{
+				$keyword = "";
+			}
+		}
+		$data['estate'] = $this->estate_model->get_all_data_estate($this->_tableNameEstate,
+			[
+				'title'=>$keyword,
+				'username' => $keyword,
+				'name_city' => $keyword,
+				'name_district' => $keyword,
+				'name_direction' => $keyword,
+				'price' => $keyword
+			]
+		);
 		switch ($action) {
 			case 'create':
 				$this->create();
